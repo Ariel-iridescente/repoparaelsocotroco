@@ -1,0 +1,54 @@
+
+<app-navbar> </app-navbar>
+
+<div class="container">
+
+        <h1>Registrate</h1>
+
+        <div class="row">
+            
+            
+                
+                <form [formGroup] = "form" (ngSubmit)="registrar()">
+                    
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" name="nombre" formControlName="nombre" placeholder="nombre">
+                        <span class="text-danger" *ngIf="form.get('nombre').status != 'VALID' && form.get('nombre').touched;">No cumple los requisitos</span>
+        
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" name="apellido" formControlName="apellido" placeholder="apellido">
+                        <span class="text-danger" *ngIf="form.get('apellido').status != 'VALID' && form.get('apellido').touched;">No cumple los requisitos</span>
+        
+                    </div>
+                    
+                    <div class="form-group">
+
+                        <input type="email" class="form-control" name="mail" formControlName="mail" placeholder="foo@example.com">
+                        <span class="text-danger" *ngIf="form.get('mail').status != 'VALID' && form.get('mail').touched;">Mail invalido</span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="telefono" formControlName="telefono" placeholder="telefono">
+                        <span class="text-danger" *ngIf="form.get('telefono').status != 'VALID' && form.get('telefono').touched;">No cumple los requisitos</span>
+        
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" name="password" formControlName="password" placeholder="password">
+                        <span class="text-danger" *ngIf="form.get('password').status != 'VALID' && form.get('password').touched;">No cumple los requisitos</span>
+        
+                    </div>
+
+                    <button type="submit" [disabled]="form.invalid" class="btn btn-success btn-block">Registrarse</button>
+                    
+                
+                </form>
+            
+            
+    
+        </div>
+</div>

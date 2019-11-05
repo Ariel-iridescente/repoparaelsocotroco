@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="contp">
+    <div class="conth">
+        <div class="form">
+            <form [formGroup]="infouser" (ngSubmit)="updateUser()">
+                <div class="form-group">
+                    <span class="label">Nombre</span>
+                    <input type="text" class="form-control" name="nombre_usuario" formControlName="nombre_usuario" value="{{datausuario[0].nombre_usuario}}">
+                </div>
+        
+                <div class="form-group">
+                    <span class="label">Apellido</span>
+                    <input type="text" class="form-control" name="apellido_usuario" formControlName="apellido_usuario" value="{{datausuario[0].apellido_usuario}}">
+                </div>
+
+                <div class="form-group">
+                    <span class="label">Mail</span>
+                    <input type="text" class="form-control" name="mail_usuario" formControlName="mail_usuario" value="{{datausuario[0].mail_usuario}}">
+                </div>
+
+                <div class="form-group">
+                    <span class="label">Telefono</span>
+                    <input type="number" class="form-control" name="telefono_usuario" formControlName="telefono_usuario" value="{{datausuario[0].telefono_usuario}}">
+                </div>
+
+                <input class="btn btn-block" type="submit" value="Actualizar datos">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="navbar">
+    <div class="left">
+        <!-- <img src="https://www.fourjay.org/fpng/d/4-41236_vaporwave-png-transparent-png.png" alt=""> -->
+        <h1>Cosito</h1>
+    </div>
+    <div class="right">
+        <ul *ngIf="login; else nologin">
+            <!-- <li><a href="">Mi cuenta</a></li>
+            <li><a href="" (click)="logout()">Cerrar sesion</a></li> -->
+            <li class="dropdown"><a href="">{{nombre}}</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li [routerLink]="['/perfil']">Perfil</li>
+                        <li (click)="logout()">Salir</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ng-template #nologin>
+            <ul>
+                <li><a href="" [routerLink]="['/login']">Iniciar sesion</a></li>
+            </ul>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    background-image: url(/assets/pattern6.jpg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.contp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    /* height: 100%; */
+    height: calc(100% - 50px);
+    flex-grow: 2;
+    flex-wrap: wrap;
+}
+.contc {
+    width: 100%;
+}
+.img-100 {
+    width: 100%;
+}
+.conth {
+    padding: 2rem;
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+}
+.btn {
+    background-color: black;
+    color: white!important;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn:hover {
+    color: white;
+    text-decoration: underline!important;
+    /* text-decoration-style: wavy; */
+}
